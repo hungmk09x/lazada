@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Man</title>
+    <link rel="stylesheet" href="../assest/css/pages.css">
+    <!--lightslider-css-->
+    <link rel="stylesheet" type="text/css" href="../css/lightslider.css">
+    <!--Jquery-->
+    <script src="../js/JQuery.js"></script>
+    <!--light-slider-js-->
+    <script src="../js/lightslider.js"></script>
+    <link rel="shortcut icon" href="../images/fav-icon.png">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase-auth.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
+</head>
+<body>
+        <!-- navigation -->
+        <nav>
+            <!-- social-links -and-phone-number -->
+            <div class="social-call">
+                <!-- social-links -->
+                <div class="social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>   
+                    <!-- phone-number -->
+                    <div class="phone">
+                        <span>Call +12344566</span>
+                    </div>
+                </div>
+            </div>
+            <!-- menu-bar -->
+            <div class="navigation">
+                <!-- logo -->
+                <a href="#" class="logo">
+                    <img src="../images/logo.png">
+                </a>
+                <!---menu-icon-->
+                <div class="toggle">
+                   
+                </div>
+                <!--menu-->
+                <ul class="menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Men</a>
+                        <!--sale-lable-->
+                        <span class="sale-label"> Sale </span>
+                    </li> 
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Kids</a></li>
+                    <li><a href="#">Shop</a></li>
+                </ul>
+                <div class="right-menu">
+                    <!--search-->
+                    <a href="javascript:void(0)" class="search">
+                        <i class="fa fa-search"></i>
+                    </a>
+                    <!--user-->
+                    <a href="javascript:void(0)" class="user">
+                        <i class="fa fa-user"></i>
+                    </a>
+                    <!--cart-icon-->
+                    <a href="javascript:void(0)">
+                        <i class="fa fa-shopping-cart">
+                        <!--number-of-product-in-cart-->
+                        <span class="num-cart-product">0</span>
+                    </i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <!--search-bar-->
+        <div class="search-bar">
+            <!--seacrh-input-->
+            <div class="search-input">
+                <!--input-->
+                <input type="text" placeholder="Search For Product">
+                <!--cancel-btn-->
+                <a href="javascript:void(0)" class="search-cancel">
+                    <i class="fa fa-times"></i>
+                </a>
+            </div>
+        </div>
+    
+        
+        <!--loggin and signup-form-->
+        <div class="form">
+            <!--loggin-->
+            <div class="login-form">
+                <!--cancel-btn-->
+                 <a href="javascript:void(0)" class="form-cancel">
+                    <i class="fa fa-times"></i>
+                </a>            
+                <!--heading-->
+                <strong>Log In</strong>
+                <!--input-->
+                <form>
+                    <input type="email" placeholder="Example@gmail.com" name="email" required>
+                    <input type="Password" placeholder="Password" name="Password" required>
+                    <!--submit-btn-->
+                     <a href="index.html"><input  type="submit" value="Login"></a> 
+                </form> 
+                <!--forget-and-sign-up-btn-->
+                <div class="form-btns">
+                <a href="login.html" class="forget">Forget Your Password</a>
+                <a href="register.html" class="sign-up-btn">Create Account</a>
+                </div>     
+            </div>
+    
+            <!--sign-up-->
+            <div class="sign-up-form">
+                <!--cancel-btn-->
+                <a href="javascript:void(0)" class="form-cancel">
+                    <i class="fa fa-times"></i>
+                </a>           
+                <!--heading-->
+                <strong>Sign Up</strong>
+                <!--input-->
+                <form>
+                    <input type="text" placeholder="Full Name" name="full name" required>
+                    <input type="email" placeholder="Example@gmail.com" name="email" required>
+                    <input type="Password" placeholder="Password" name="Password" required>
+                    <!--submit-btn-->
+                     <input type="submit" value="Login"> 
+                </form> 
+                <!--forget-and-sign-up-btn-->
+                <div class="form-btns">
+                <a href="javascript:void(0)" class="already-acount">Already Have Account</a>
+             
+                </div>    
+            </div> 
+        </div>
+        <!--Banner---------------------------->
+        <div class="fashion-feture">
+            <div class="banner-fashion-produce ">
+                <div class="banner">
+                    <img src="../img/banner.jpg">
+                </div>
+            </div>
+            <div class="text-top">
+                <strong>Miễn Phí Vận Chuyển Cho Đơn Hàng Trên 299k</strong>
+            </div>
+            <div class="note-address">
+                <p>Trang chủ /Nam /Danh mục sản phẩm /Bộ mặc nhà nam sát nách</p>
+            </div>
+            <div class="fashion-t-shirt">
+                <div class="details-produce-t-shirt">
+                    <div class="img-p">
+                        <ul class="list-change">
+                            <li><img src="../images/man-1.jpg" onclick="changeImage('one')" id="one"/></li>
+                            <li><img src="../images/man-2.jpg" onclick="changeImage('two')" id="two"/></li>
+                            <li><img src="../images/man-3.jpg" onclick="changeImage('three')" id="three"/></li>
+                            <li><img src="../images/man-4.jpg" onclick="changeImage('four')" id="four"/></li>       
+                        </ul>
+                    <div class="change-image">
+                        <img src="../images/man-1.jpg" id="change-image-one">
+                    </div>
+                    <div class="details-pr">
+                        <strong>BỘ MẶC NHÀ NAM SÁT NÁCH.</strong>
+                        <p class="Code">Mã: 8LS21S002</p>
+                        <p class="price-pr">349.000₫</p>
+                        <div class="choose-size">
+                            <p>Chon kich co:</p>
+                                <button type="button">M</button>
+                                <button type="button">M</button>
+                                <button type="button">M</button>
+                                <button type="button">M</button>
+                        </div>
+                        <div class="buttons_added">
+                            <strong>Chọn Số Lượng</strong>
+                        </div>
+                        <div class="up-down">
+                            <input class="minus is-form" type="button" value="-">
+                            <input aria-label="quantity" class="input-qty" max="10" min="1" name="" type="number" value="1">
+                            <input class="plus is-form" type="button" value="+">
+                        </div>
+                        <div class="click-buy">
+                            <button class="button-red" type="button">Thêm Vào Giỏ Hàng</button>
+                            <button class="button-black" type="button">Tìm Cửa Hàng</button>
+                        </div>
+                        <div class="describe-produce-t-shirt">
+                            <p>Mô Tả:</p>
+                            <p>Bộ mặc nhà đạt chuẩn Oeko-Tex, có hình in trước ngực.<br>
+                                Dáng regular, cổ tròn, không tay, quần cộc.</p>
+                            <p>Chất Liệu:<br>100% Cotton</p>
+                            <p>Hướng Dẫn Sử Dụng:</p>
+                            <p>Giặt máy ở chế độ nhẹ, nhiệt độ thường.<br>
+                                Không sử dụng hóa chất tẩy Có chứa clo.<br>
+                                Phơi trong bóng mát.<br>
+                                Sấy thùng, chế độ nhẹ nhàng, ở nhiệt độ thấp.<br>
+                                Là ở nhiệt độ trung bình 150 độ c.<br>
+                                Giặt với sản phẩm cùng màu.<br>
+                                Không là lên chi tiết trang trí.</p>    
+                        </div>   
+                    </div>
+                 </div>
+            </div>
+            <div class="similar-produce">
+                <div class="pr-similar">
+                    <div class="name-pr-similar">
+                        <strong>SẢN PHẨM TƯƠNG TỰ<strong>
+                    </div>
+                    <div class="image-similar-pr">
+                        <div class="flexitem">
+                            <img src="../img/t-2.jpg" alt="">
+                            <p>Bộ Mặc Nhà Nam</p>
+                            <p>349.000</p>
+                        </div>                                    
+                        <div class="flexitem">
+                            <img src="../img/t-2.jpg" alt="">
+                            <p>Bộ Mặc Nhà  100% Cotton</p>
+                            <p>349.000</p>
+                        </div>
+                        <div class="flexitem">
+                            <img src="../img/t-2.jpg" alt="">
+                            <p>Bộ Mặc Nhà Nam Dài Tay</p>
+                            <p>449.000</p>
+                        </div>                                 
+                    </div>
+                </div>
+            </div>
+        </div>   
+        <div class="footer">
+            <div class="footer-left">
+                <div class="footer-1">
+                    <div class="footer-heading-title">
+                        <strong>CÔNG TY CỔ PHẦN CANIFA</strong>
+                    </div>
+                    <div class="footer-des-1">
+                        <p>Số ĐKKD: 0107574310, ngày cấp:<br> 23/09/2016. Nơi cấp: Sở Kế hoạch và<br> đầu tư Hà Nội</p>
+                        <p>Địa chỉ liên hệ: Phòng 301 Tòa nhà<br> GP Invest, 170 La Thành, P. Ô Chợ<br> Dừa, Q. Đống Đa, Hà Nội</p>
+                        <p>Điện thoại: +8424 - 7303.0222<br>
+                            Fax: +8424 - 6277.6419<br>
+                            Email: hello@canifa.com</p>
+                        <img src="../img/dang-ky.svg">
+                        <p>© 2020 Dirty-Store</p>
+                    </div>
+                </div>
+                <div class="footer-2">
+                    <div class="footer-heading-title">
+                        <strong>THƯƠNG HIỆU</strong>
+                    </div>
+                    <div class="footer-des-2">
+                        <a href="#">Về Dirty-Store</a><br>
+                        <a href="#">Phát Triển Bền Vững</a><br>
+                        <a href="#">Cơ Hội Làm Việc Tại Dirty-Store</a><br>
+                        <a href="#">Blog</a><br>
+                        <a href="#">Đặt Đồng Phục</a><br>
+                        <a href="#">Hệ Thống Cửa Hàng</a><br>
+                        <a href="#">Chính Sách Khách Hàng Thân Thiết</a><br>
+                        <a href="#">Chính Sách Bảo Mật Thông Tin</a><br>
+                        <a href="#">Giới Thiệu C-Point</a>
+                    </div>
+                </div>
+                <div class="footer-3">
+                    <div class="footer-heading-title">
+                        <strong>HỖ TRỢ</strong>
+                    </div>
+                    <div class="footer-des-3">
+                        <a href="#">Về Dirty-Store</a><br>
+                        <a href="#">Phát Triển Bền Vững</a><br>
+                        <a href="#">Cơ Hội Làm Việc Tại Dirty-Store</a><br>
+                        <a href="#">Blog</a><br>
+                        <a href="#">Đặt Đồng Phục</a><br>
+                        <a href="#">Hệ Thống Cửa Hàng</a><br>
+                        <a href="#">Chính Sách Khách Hàng Thân Thiết</a><br>
+                        <a href="#">Chính Sách Bảo Mật Thông Tin</a><br>
+                        <a href="#">Giới Thiệu C-Point</a>
+                    </div>
+                </div>
+                <div class="footer-4">
+                    <div class="footer-heading-title">
+                        <strong>ĐĂNG KÝ NHẬN TIN</strong>
+                    </div>
+                    <div class="footer-des-4">
+                        <input style="width:280px" type="input" >
+                        <button type="button">Gửi</button>
+                    </div>
+                    <div class="footer-connect">
+                        <strong>KẾT NỐI</strong>
+                    </div>
+                    <div class="footer-icon">
+                        <i class="fab fa-facebook-square" ></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <div class="footer-qr-connect">
+                        <img src="../img/QR.jpg">
+                    </div>
+                    <div class="footer-icon-smart">
+                        <img src="../img/img-app1.png">
+                        <img src="../img/img-app2.png">
+                    </div>
+                    </div>
+                </div>
+                
+             </div>  
+        </div>
+                     
+                    
+                    
+                    
+               
+       
+           
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script src="../index.js"></script>
+        <script type="text/javascript">
+            /*-full-slider-script------*/
+            $(document).ready(function() {
+                $('#adaptive').lightSlider({
+                    adaptiveHeight:true,
+                    auto: true,
+                    item:1,
+                    slideMargin:0,
+                    loop:true
+                });
+            });
+             //for buttons
+             $('input.input-qty').each(function() {
+                var $this = $(this),
+                    qty = $this.parent().find('.is-form'),
+                    min = Number($this.attr('min')),
+                    max = Number($this.attr('max'))
+                if (min == 0) {
+                    var d = 0
+                } else d = min
+                $(qty).on('click', function() {
+                    if ($(this).hasClass('minus')) {
+                    if (d > min) d += -1
+                    } else if ($(this).hasClass('plus')) {
+                    var x = Number($this.val()) + 1
+                    if (x <= max) d += 1
+                    }
+                    $this.attr('value', d).val(d)
+                })
+                })
+
+             
+             // for-search
+            $(document).on('click','.search', function(){
+                $('.search-bar').addClass('search-bar-active')
+            });
+            
+            $(document).on('click','.search-cancel', function(){
+                $('.search-bar').removeClass('search-bar-active')
+            });
+            // login-sign-up-form
+            $(document).on('click','.user, .already-acount', function(){
+                $('.form').addClass('login-active').removeClass('sign-up-active')
+            });
+            $(document).on('click','.sign-up-btn', function(){
+                $('.form').addClass('sign-up-active').removeClass('login-active')
+            });
+            $(document).on('click','.form-cancel', function(){
+                $('.form').removeClass('login-active').removeClass('sign-up-active')
+            });
+            
+        
+        </script>
+
+</body>

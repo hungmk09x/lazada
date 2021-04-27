@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Website</title>
+    <link rel="stylesheet" href="../assest/css/pages.css">
+    <!--lightslider-css-->
+    <link rel="stylesheet" type="text/css" href="../css/lightslider.css">
+    <!--Jquery-->
+    <script src="../js/JQuery.js"></script>
+    <!--light-slider-js-->
+    <script src="../js/lightslider.js"></script>
+    <link rel="shortcut icon" href="../images/fav-icon.png">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase-auth.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
+</head>
+<body>
+        <!-- navigation -->
+        <nav>
+            <!-- social-links -and-phone-number -->
+            <div class="social-call">
+                <!-- social-links -->
+                <div class="social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>   
+                    <!-- phone-number -->
+                    <div class="phone">
+                        <span>Call +12344566</span>
+                    </div>
+                </div>
+            </div>
+            <!-- menu-bar -->
+            <div class="navigation">
+                <!-- logo -->
+                <a href="#" class="logo">
+                    <img src="../images/logo.png">
+                </a>
+                <!---menu-icon-->
+                <div class="toggle">
+                   
+                </div>
+                <!--menu-->
+                <ul class="menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Men</a>
+                        <!--sale-lable-->
+                        <span class="sale-label"> Sale </span>
+                    </li> 
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Kids</a></li>
+                    <li><a href="#">Shop</a></li>
+                </ul>
+                <div class="right-menu">
+                    <!--search-->
+                    <a href="javascript:void(0)" class="search">
+                        <i class="fa fa-search"></i>
+                    </a>
+                    <!--user-->
+                    <a href="javascript:void(0)" class="user">
+                        <i class="fa fa-user"></i>
+                    </a>
+                    <!--cart-icon-->
+                    <a href="javascript:void(0)">
+                        <i class="fa fa-shopping-cart">
+                        <!--number-of-product-in-cart-->
+                        <span class="num-cart-product">0</span>
+                    </i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <!--search-bar-->
+        <div class="search-bar">
+            <!--seacrh-input-->
+            <div class="search-input">
+                <!--input-->
+                <input type="text" placeholder="Search For Product">
+                <!--cancel-btn-->
+                <a href="javascript:void(0)" class="search-cancel">
+                    <i class="fa fa-times"></i>
+                </a>
+            </div>
+        </div>
+    
+        
+        <!--loggin and signup-form-->
+        <div class="form">
+            <!--loggin-->
+            <div class="login-form">
+                <!--cancel-btn-->
+                 <a href="javascript:void(0)" class="form-cancel">
+                    <i class="fa fa-times"></i>
+                </a>            
+                <!--heading-->
+                <strong>Log In</strong>
+                <!--input-->
+                <form>
+                    <input type="email" placeholder="Example@gmail.com" name="email" required>
+                    <input type="Password" placeholder="Password" name="Password" required>
+                    <!--submit-btn-->
+                     <a href="index.html"><input  type="submit" value="Login"></a> 
+                </form> 
+                <!--forget-and-sign-up-btn-->
+                <div class="form-btns">
+                <a href="login.html" class="forget">Forget Your Password</a>
+                <a href="register.html" class="sign-up-btn">Create Account</a>
+                </div>     
+            </div>
+    
+            <!--sign-up-->
+            <div class="sign-up-form">
+                <!--cancel-btn-->
+                <a href="javascript:void(0)" class="form-cancel">
+                    <i class="fa fa-times"></i>
+                </a>           
+                <!--heading-->
+                <strong>Sign Up</strong>
+                <!--input-->
+                <form>
+                    <input type="text" placeholder="Full Name" name="full name" required>
+                    <input type="email" placeholder="Example@gmail.com" name="email" required>
+                    <input type="Password" placeholder="Password" name="Password" required>
+                    <!--submit-btn-->
+                     <input type="submit" value="Login"> 
+                </form> 
+                <!--forget-and-sign-up-btn-->
+                <div class="form-btns">
+                <a href="javascript:void(0)" class="already-acount">Already Have Account</a>
+             
+                </div>    
+            </div> 
+        </div>
+        <!--Full-Slider---------------------------->
+        <ul id="adaptive" class="cs-hidden">
+            <!--box-1-->
+            <li class="item-a">
+                <!--box---------->
+                <div class="full-slider-box f-slide-1">
+                    <!--slide-text-container----------->
+                    <div class="slider-text-container">
+        
+                        <div class="f-slider-text">
+                            
+                            
+                           
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <!--box-2-->
+            <li class="item-a">
+                <!--box---------->
+                <div class="full-slider-box f-slide-2">
+                    <!--slide-text-container----------->
+                    <div class="slider-text-container">
+        
+                        <div class="f-slider-text">
+                            
+                        </div>
+                    </div>
+                </div>
+            </li>
+    
+            <!--box-3-->
+            <li class="item-a">
+                <!--box---------->
+                <div class="full-slider-box f-slide-3">
+                    <!--slide-text-container----------->
+                    <div class="slider-text-container">
+        
+                        
+                    </div>
+                </div>
+            </li>
+          </ul>
+          
+
+     <!--new-arrival-->
+     <section class="new-arrival">
+        <!--heading--------->
+        <div class="arrival-heading">
+            <strong>feature-item</strong>
+            <p> We Provide You New Design Fasion Clothes</p>
+        </div>
+        <!---product-container-->
+        <div class="product-container">
+            <!--product-box-1-->
+            <div class="product-box">
+                
+                <!--img-->
+                <div class="product-img">
+                   
+                   <a href="man.html"><img src="../img/t-1.jpg " onclick="changeImage('one')" id="one"></a> 
+                </div>
+                <!--detail-->
+                <div class="product-details">
+                    <a href="" class="p-name"></a>
+                    <span class="p-price">$22.00</span>
+                </div>
+            </div>
+             <!--product-box-2-->
+             <div class="product-box">
+                
+                <!--img-->
+                <div class="product-img">
+                   
+                    <img src="../img/t-1.jpg">
+                </div>
+                <!--detail-->
+                <div class="product-details">
+                    <a href="" class="p-name">Drawstring T-Shirt</a>
+                    <span class="p-price">$22.00</span>
+                </div>
+            </div>
+             <!--product-box-1-->
+             <div class="product-box">
+                
+                <!--img-->
+                <div class="product-img">
+                   
+                    <img src="../img/t-1.jpg">
+                </div>
+                <!--detail-->
+                <div class="product-details">
+                    <a href="" class="p-name">Drawstring T-Shirt</a>
+                    <span class="p-price">$22.00</span>
+                </div>
+            </div>
+             <!--product-box-1-->
+             <div class="product-box">
+                
+                <!--img-->
+                <div class="product-img">
+                   
+                    <img src="../img/t-1.jpg">
+                </div>
+                <!--detail-->
+                <div class="product-details">
+                    <a href="" class="p-name">Drawstring T-Shirt</a>
+                    <span class="p-price">$22.00</span>
+                </div>
+            </div>
+             <!--product-box-1-->
+             <div class="product-box">
+                
+                <!--img-->
+                <div class="product-img">
+                   
+                    <img src="../img/t-1.jpg">
+                </div>
+                <!--detail-->
+                <div class="product-details">
+                    <a href="" class="p-name">Drawstring T-Shirt</a>
+                    <span class="p-price">$22.00</span>
+                </div>
+            </div>
+             <!--product-box-1-->
+             <div class="product-box">
+                
+                <!--img-->
+                <div class="product-img">
+                   
+                    <img src="../img/t-1.jpg">
+                </div>
+                <!--detail-->
+                <div class="product-details">
+                    <a href="" class="p-name">Drawstring T-Shirt</a>
+                    <span class="p-price">$22.00</span>
+                </div>
+            </div>
+             <!--product-box-1-->
+             <div class="product-box">
+                
+                <!--img-->
+                <div class="product-img">
+                   
+                    <img src="../img/t-1.jpg">
+                </div>
+                <!--detail-->
+                <div class="product-details">
+                    <a href="" class="p-name">Drawstring T-Shirt</a>
+                    <span class="p-price">$22.00</span>
+                </div>
+            </div>
+             <!--product-box-1-->
+             <div class="product-box">
+                
+                <!--img-->
+                <div class="product-img">
+                   
+                    <img src="../img/t-1.jpg">
+                </div>
+                <!--detail-->
+                <div class="product-details">
+                    <a href="" class="p-name">Drawstring T-Shirt</a>
+                    <span class="p-price">$22.00</span>
+                </div>
+            </div>
+             <!--product-box-1-->
+             <div class="product-box">
+                
+                <!--img-->
+                <div class="product-img">
+                   
+                    <img src="../img/t-1.jpg">
+                </div>
+                <!--detail-->
+                <div class="product-details">
+                    <a href="" class="p-name">Drawstring T-Shirt</a>
+                    <span class="p-price">$22.00</span>
+                </div>
+            </div>
+             <!--product-box-1-->
+             <div class="product-box">
+                
+                <!--img-->
+                <div class="product-img">
+                   
+                    <img src="../img/t-1.jpg">
+                </div>
+                <!--detail-->
+                <div class="product-details">
+                    <a href="" class="p-name">Drawstring T-Shirt</a>
+                    <span class="p-price">$22.00</span>
+                </div>
+            </div>
+             <!--product-box-1-->
+             <div class="product-box">
+                
+                <!--img-->
+                <div class="product-img">
+                   
+                    <img src="../img/t-1.jpg">
+                </div>
+                <!--detail-->
+                <div class="product-details">
+                    <a href="" class="p-name">Drawstring T-Shirt</a>
+                    <span class="p-price">$22.00</span>
+                </div>
+            </div>
+             <!--product-box-1-->
+             <div class="product-box">
+                
+                <!--img-->
+                <div class="product-img">
+                   
+                    <img src="../img/t-1.jpg">
+                </div>
+                <!--detail-->
+                <div class="product-details">
+                    <a href="" class="p-name">Drawstring T-Shirt</a>
+                    <span class="p-price">$22.00</span>
+                </div>
+            </div>
+             <!--product-box-1-->
+             <div class="product-box">
+                
+                <!--img-->
+                <div class="product-img">
+                   
+                    <img src="../img/t-1.jpg">
+                </div>
+                <!--detail-->
+                <div class="product-details">
+                    <a href="" class="p-name">Drawstring T-Shirt</a>
+                    <span class="p-price">$22.00</span>
+                </div>
+            </div>
+             <!--product-box-1-->
+             <div class="product-box">
+                
+                <!--img-->
+                <div class="product-img">
+                   
+                    <img src="../img/t-1.jpg">
+                </div>
+                <!--detail-->
+                <div class="product-details">
+                    <a href="" class="p-name">Drawstring T-Shirt</a>
+                    <span class="p-price">$22.00</span>
+                </div>
+            </div>
+             <!--product-box-1-->
+             <div class="product-box">
+                
+                <!--img-->
+                <div class="product-img">
+                   
+                    <img src="../img/t-1.jpg">
+                </div>
+                <!--detail-->
+                <div class="product-details">
+                    <a href="" class="p-name">Drawstring T-Shirt</a>
+                    <span class="p-price">$22.00</span>
+                </div>
+            </div>
+        
+
+            <!-- <div class="change-image">
+                <img src="img/im1.jpg" id="change-image-one">
+            </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- <div class="describe">
+                 <strong>T-Shirt Summer</strong>
+                 <p>We Provide You New Design Fasion Clothes</p>
+            <div class="list-clothes">
+                <ul class="list-change">
+                    <li><img src="../images/man-1.jpg" onclick="changeImage('one')" id="one"/></li>
+                    <li><img src="../images/man-2.jpg" onclick="changeImage('two')" id="two"/></li>
+                    <li><img src="../images/man-3.jpg" onclick="changeImage('three')" id="three"/></li>
+                    <li><img src="../images/man-4.jpg" onclick="changeImage('four')" id="four"/></li>       
+                </ul>
+            <div class="change-image">
+            <img src="../images/man-1.jpg" id="change-image-one">
+            </div>
+           
+       <div class="text">
+           <p>ÁO PHÔNG NAM COTTON USA IN CHỮ</p>
+       </div>
+       </div>
+       </div> -->
+        </section>
+
+    
+          
+           
+         
+    
+     
+    
+       
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript" src="index.js"></script>    
+    <script type="text/javascript">
+    //pr6
+    function changeImage(id){
+        let imgPath = document.getElementById(id).getAttribute('src');
+        document.getElementById('change-image-one').setAttribute('src',imgPath);
+        console.log(imgPath)
+    }
+
+    $(document).ready(function() {
+        $('#imageGallery').lightSlider({
+            gallery:true,
+            item:1,
+            loop:true,
+            thumbItem:9,
+            slideMargin:0,
+            enableDrag: false,
+            currentPagerPosition:'left',
+            onSliderLoad: function(el) {
+                el.lightGallery({
+                    selector: '#imageGallery .lslide'
+                });
+            }   
+        });  
+    });
+        /*-full-slider-script------*/
+        $(document).ready(function() {
+            $('#adaptive').lightSlider({
+                adaptiveHeight:true,
+                auto: true,
+                item:1,
+                slideMargin:0,
+                loop:true
+            });
+        });
+
+         // for-search
+         $(document).on('click','.search', function(){
+            $('.search-bar').addClass('search-bar-active')
+        });
+        
+        $(document).on('click','.search-cancel', function(){
+            $('.search-bar').removeClass('search-bar-active')
+        });
+        // login-sign-up-form
+        $(document).on('click','.user, .already-acount', function(){
+            $('.form').addClass('login-active').removeClass('sign-up-active')
+        });
+        $(document).on('click','.sign-up-btn', function(){
+            $('.form').addClass('sign-up-active').removeClass('login-active')
+        });
+        $(document).on('click','.form-cancel', function(){
+            $('.form').removeClass('login-active').removeClass('sign-up-active')
+        });
+
+    </script>
+      </body>
